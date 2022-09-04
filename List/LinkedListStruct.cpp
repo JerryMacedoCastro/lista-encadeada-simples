@@ -119,3 +119,11 @@ List* addOrdered (List* list, int value) {
 	return list;
 }
 
+bool isEqualLists (List* list1, List* list2) {
+	List* p1; 
+	List* p2; 
+	for (p1=list1, p2=list2; p1 != NULL && p2 != NULL;  p1 = p1->next, p2 = p2->next) 
+		if (p1->info != p2->info) 
+			return false;
+	return p1 == p2;
+}

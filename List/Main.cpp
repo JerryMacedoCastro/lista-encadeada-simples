@@ -1,14 +1,25 @@
 #include <stdio.h>
-#include "LinkedListStruct.cpp"
+#include "DoublyLinkedList.cpp"
 
 int main(int argc, char** argv) {
-	List* l = createList();
-	l = addOrdered(l, 10);
-	l = addOrdered(l, 12);
-	l = addOrdered(l, 4);
-	l = addOrdered(l, 50);
-	l = addOrdered(l, 1);
+	List* l1 = createList();
+	List* l2 = createList();
+	l1 = addOrdered(l1, 10);
+	l1 = addOrdered(l1, 4);
+	l1 = addOrdered(l1, 29);
+	l1 = addOrdered(l1, 2);
+	l1 = addOrdered(l1, 7);
+
+	l2 = l1;
+	// showRecursive(l);
+	// l = removeFromListRecursive(l, 29);
+	if (isEqualLists(l1, l2)) 
+		printf("Listas iguais");
+	else 
+		printf("Listas Diferentes");
 	
-	show(l);
+	printf("\n");
+
+	
 	printf("hello darkness my old friend\n");
 }
