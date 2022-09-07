@@ -1,24 +1,16 @@
 #include <stdio.h>
-#include "DoublyLinkedList.cpp"
+#include "LinkedCircularList.cpp"
 
 int main(int argc, char** argv) {
-	List* l1 = createList();
-	List* l2 = createList();
-	l1 = addOrdered(l1, 10);
-	l1 = addOrdered(l1, 4);
-	l1 = addOrdered(l1, 29);
-	l1 = addOrdered(l1, 2);
-	l1 = addOrdered(l1, 7);
+	List* l = createList();
+	l = pushBack(l, 2);
 
-	l2 = l1;
-	// showRecursive(l);
-	// l = removeFromListRecursive(l, 29);
-	if (isEqualLists(l1, l2)) 
-		printf("Listas iguais");
-	else 
-		printf("Listas Diferentes");
-	
-	printf("\n");
+	show(l);
+
+	if(isEmptyList(l)) {
+		printf("Lista vazia \n");
+	}
+
 
 	
 	printf("hello darkness my old friend\n");
