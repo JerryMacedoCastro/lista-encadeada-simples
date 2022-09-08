@@ -1,17 +1,23 @@
 #include <stdio.h>
-#include "LinkedCircularList.cpp"
+#include "DoublyLinkedCircularList.h"
 
 int main(int argc, char** argv) {
 	List* l = createList();
-	l = pushBack(l, 2);
+
+	l = push(l, 1);
+	l = push(l, 2);
+	l = push(l, 5);
+	l = push(l, 3);
+	l = push(l, 7);
 
 	show(l);
 
-	if(isEmptyList(l)) {
-		printf("Lista vazia \n");
-	}
+	l = removeFromList(l, 1);
+	l = removeFromList(l, 7);
+	l = removeFromList(l, 5);
 
+	printf("\nhello darkness my old friend\n");
+	show(l);
 
 	
-	printf("hello darkness my old friend\n");
 }

@@ -127,9 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="LinkedListClass.cpp" />
-    <ClCompile Include="LinkedListStruct.cpp" />
+    <ClCompile Include="DoublyLinkedList.h" />
+    <ClCompile Include="LinkedCircularList.h" />
+    <ClCompile Include="LinkedList.h" />
     <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DoublyLinkedCircularList.h" />
+    <ClInclude Include="DoublyList.h" />
+    <ClInclude Include="List.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

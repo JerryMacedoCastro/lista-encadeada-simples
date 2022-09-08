@@ -2,12 +2,12 @@
 #include <stdio.h>
 using namespace std;
 
-class Node {
+class NodeClass{
 private:
 	int v;
-	Node* next;
+	NodeClass* next;
 
-public: Node(int v) {
+public: NodeClass(int v) {
 	this->v = v;
 	this->next = NULL;
 }
@@ -15,33 +15,33 @@ public: Node(int v) {
 		  return v;
 	  }
 
-	  Node* getNext() {
+	  NodeClass* getNext() {
 		  return next;
 	  }
 
-	  void setNext(Node* n) {
+	  void setNext(NodeClass* n) {
 		  next = n;
 	  }
 };
 
 
-class List {
+class ListClass {
 	//propriedades 
 	private:
-		Node* head;
-		Node* tail;
+		NodeClass* head;
+		NodeClass* tail;
 	//construtor vazio
-	public: List() {
+	public: ListClass() {
 		head = NULL;
 		tail = NULL;
 	}
 	//construtor com valor inicial
-	public: List(int v) {
-		head = new Node(v);
+	public: ListClass(int v) {
+		head = new NodeClass(v);
 		tail = head;
 	}
 	  //destrutor
-	  virtual ~List() {
+	  virtual ~ListClass() {
 		  delete head;
 	  }
 	  //verifica se a lista está vazia
@@ -50,7 +50,7 @@ class List {
 	  }
 	  //imprime valores da lista 
 	  void show() {
-		  Node* h = head;
+		  NodeClass* h = head;
 		  cout << "\nElementos da lista\n";
 		  if (isEmpty()) {
 			  cout << "Lista vazia!";
@@ -63,8 +63,8 @@ class List {
 		  cout << endl;
 	  }
 	  //imprime valores da lista de forma recursiva
-	  void showRecursive(List* l) {
-		  Node* h = l->head;
+	  void showRecursive(ListClass* l) {
+		  NodeClass* h = l->head;
 		  if (h->getValue() == NULL) return;
 		  else {
 			  cout << h->getValue() << " ";
@@ -73,35 +73,35 @@ class List {
 		  }
 
 	  }
-	  //imprime valores da lista de forma recursiva reversa
-	  void showReverseRecursive(List* l) {
-		  Node* h = l->head;
+	  //imprime valores da ListClassa de forma recursiva reversa
+	  void showReverseRecursive(ListClass* l) {
+		  NodeClass* h = l->head;
 		  if (!l->isEmpty()) {
 			  l->head = h->getNext();
 			  showReverseRecursive(l);
 			  printf("%d ", h->getValue());
 		  }
 	  }
-	  //insere no inicio da lista 
+	  //insere no inicio da ListClassa 
 	  void pushFront(int v) {
-		  Node* newNode = new Node(v);
-		  newNode->setNext(head);
-		  head = newNode;
+		  NodeClass* newNodeClass = new NodeClass(v);
+		  newNodeClass->setNext(head);
+		  head = newNodeClass;
 	  }
-	  //insere no final da lista
+	  //insere no final da ListClassa
 	  void pushBack(int v) {
-		  Node* newNode = new Node(v);
+		  NodeClass* newNodeClass = new NodeClass(v);
 		  if (isEmpty()) {
-			  head = newNode;
+			  head = newNodeClass;
 		  }
 		  else {
-			  tail->setNext(newNode);
-			  tail = newNode;
+			  tail->setNext(newNodeClass);
+			  tail = newNodeClass;
 		  }
 	  }
 	  //retorna tamanho da lista
 	  int size() {
-		  Node* h = head;
+		  NodeClass* h = head;
 		  int size = 0;
 		  if (isEmpty())
 			  return size;
@@ -113,7 +113,7 @@ class List {
 	  }
 	  //verifica se elemento existe na lista
 	  bool hasElement(int v) {
-		  Node* h = head;
+		  NodeClass* h = head;
 
 		  if (isEmpty())
 			  return false;
@@ -137,11 +137,11 @@ class List {
 			  }
 			  //mais de dois elementos
 			  else {
-				  Node* first = head;
-				  Node* second = first->getNext();
-				  Node* current = second->getNext();
+				  NodeClass* first = head;
+				  NodeClass* second = first->getNext();
+				  NodeClass* current = second->getNext();
 				  while (current) {
-					  Node* aux = second;
+					  NodeClass* aux = second;
 					  second = current;
 					  first = aux;
 					  current = current->getNext();
@@ -155,7 +155,7 @@ class List {
 	  }
 	  //retorna um elemento da lista 
 	  int findElement(int element) {
-		  Node* h = head;
+		  NodeClass* h = head;
 		  int i = 0;
 		  do {
 			  i++;
@@ -170,8 +170,8 @@ class List {
 	  }
 	  //remove um elemento da lista
 	  int removeElement(int element) {
-		  Node* n = head;
-		  Node* aux = NULL;
+		  NodeClass* n = head;
+		  NodeClass* aux = NULL;
 		  for (int i = 0; i < size(); i++) {
 			  if (n->getValue() == element) {
 				  if (i == 0) {

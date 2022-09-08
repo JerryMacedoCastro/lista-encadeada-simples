@@ -18,11 +18,25 @@
     <ClCompile Include="Main.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedListClass.cpp">
+    <ClCompile Include="LinkedList.h">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedListStruct.cpp">
+    <ClCompile Include="DoublyLinkedList.h">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
+    <ClCompile Include="LinkedCircularList.h">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="List.h">
+      <Filter>Arquivos de Origem</Filter>
+    </ClInclude>
+    <ClInclude Include="DoublyList.h">
+      <Filter>Arquivos de Origem</Filter>
+    </ClInclude>
+    <ClInclude Include="DoublyLinkedCircularList.h">
+      <Filter>Arquivos de Origem</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
